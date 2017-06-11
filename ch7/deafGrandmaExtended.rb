@@ -10,6 +10,7 @@ while (reply != 'BYE' || counter != 3)
 	reply = gets.chomp
 	if reply == 'BYE'
 		counter = counter+1 
+	else counter = 0
 	end
 end
 puts 'BYE!'
