@@ -3,7 +3,8 @@ while (counter != 3)
 	reply = gets.chomp
 	if reply == 'BYE'
 		counter = counter+1
-	else counter = 0
+	else
+		counter = 0
 	end
 	if reply == reply.upcase		
 		if counter == 3
