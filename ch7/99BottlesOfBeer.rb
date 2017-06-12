@@ -1,17 +1,21 @@
 start = 99
-counter = start
+counter = start+1
 bottles = ' bottles '
-while counter >= 0
+while counter != 'No'
+	counter = counter-1
 	if counter == 1
 		bottles = ' bottle '
 	elsif counter == 0
 		bottles = ' bottles '
+		counter = 'No'
 	end
 	if counter != start
-		puts 'Take one down, pass it around, '+counter.to_s+bottles+'of beer on the wall.'
+		puts 'Take one down, pass it around,'
+		puts counter.to_s+bottles+'of beer on the wall.'
 		puts
 	end
-	puts counter.to_s+bottles+'of beer on the wall, '+counter.to_s+bottles+'of beer,'
-	counter = counter-1
+	puts counter.to_s+bottles+'of beer on the wall, '
+	puts counter.to_s+bottles+'of beer,'
 end
-puts 'Go to the store, buy some more, 99 bottles of beer on the wall.'
+puts 'Go to the store, buy some more,'
+puts '99 bottles of beer on the wall.'
