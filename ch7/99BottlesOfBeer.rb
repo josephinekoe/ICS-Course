@@ -1,13 +1,13 @@
 start = 99
 counter = start+1
 bottles = ' bottles '
-while counter != 'No'
+while counter != 'No more'
 	counter = counter-1
 	if counter == 1
 		bottles = ' bottle '
 	elsif counter == 0
 		bottles = ' bottles '
-		counter = 'No'
+		counter = 'No more'
 	end
 	if counter != start
 		puts 'Take one down, pass it around,'
