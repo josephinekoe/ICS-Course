@@ -1,15 +1,25 @@
-def sort array
+def sort some_array
+	recursive_sort some_array, []
+end
+def recursive_sort unsorted_array, sorted_array
+	smallest = 0
 	counter = 1
-	while array[counter-1] == array[counter]	|| array[counter-1] < array[counter]
-		counter = counter + 1
-		if counter == array.length
-			return array
+	new_unsorted = []
+	while counter < unsorted_array.length
+		if unsorted_array[smallest] > unsorted_array[counter]
+			new_unsorted.push unsorted_array[smallest]
+			smallest = counter
+		else
+			new_unsorted.push unsorted_array[counter]
 		end
+		counter = counter + 1
 	end
-	keep = array[counter-1]
-	array[counter-1] = array[counter]
-	array[counter] = keep
-	return sort array
+	sorted_array.push unsorted_array[smallest]
+	if new_unsorted.length == 0
+		return sorted_array
+	else
+		return recursive_sort new_unsorted, sorted_array
+	end
 end
 puts 'List some words to sort and press ENTER when you are done:'
 array = []
